@@ -21,5 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',firstapp.views.home, name="home"),
     path('echo',firstapp.views.echo, name="echo"),
-    path('show',firstapp.views.show, name="show")
+    path('show',firstapp.views.show, name="show"),
+    path('show2',firstapp.views.show2, name="show2"),
+    path('length',firstapp.views.length,name="length"),
+    path('bigram',firstapp.views.bigram,name="bigram"),
+    path('show3',firstapp.views.show3, name="show3")
 ]

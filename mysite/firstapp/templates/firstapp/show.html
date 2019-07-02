@@ -5,9 +5,8 @@
     <title>show</title>
 </head>
 <body>
-<h1>보여주는 곳</h1>
-{% for A in inputData.all %}
-<h1>{{A.inputData}}</h1>
-{% endfor %}
+<h1>show 1</h1>
+<h1>{{inputData}}</h1>
+<a href="{% url 'echo' %}">home</a></li>
 </body>
 </html>
