@@ -1,0 +1,16 @@
+setting에서 추가할 apps 이름 등록
+
+
+
+urls에서
+import firstapp.views 임포트후에
+path('',firstapp.views.home, name="home"), 와 같이 설정
+
+apps에서 conf 추가
+
+views에서 해당값 render or 다른 작업
+(함수 이름은 name=과 동일)
+
+{% for A in App.all %}
+<h1>{{A.inputData}}</h1>
+{% end for %}
