@@ -34,3 +34,28 @@ def show3(request):
             L.append(t[i:i + 2])
     ' '.join(L)
     return render(request, 'firstapp/show3.html', {'biData': L})
+
+#파일 입출력
+def fileinput(request):
+    return render(request, 'firstapp/fileinput.html')
+
+def fileoutput(request):
+    return render(request, 'firstapp/fileoutput.html')
+
+def indata(request):
+    name = request.GET['filename']
+    try:
+
+        with open('C:\\Users\osk\Desktop\\tmp\\'+name+'.txt','r') as r:
+            readdata = r.read()
+    except FileNotFoundError:
+        name = '파일이 존재하지 않습니다'
+        readdata = ''
+    return render(request, 'firstapp/indata.html',{'filename':name, 'readdata':readdata})
+
+def outdata(request):
+    title = request.GET['title']
+    content = request.GET['content']
+    with open('C:\\Users\osk\Desktop\\tmp\\'+title+'.txt','w') as w:
+        w.write(content)
+    return render(request, 'firstapp/outdata.html',{'title':title ,'content':content})

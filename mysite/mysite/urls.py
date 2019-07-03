@@ -25,5 +25,9 @@ urlpatterns = [
     path('show2',firstapp.views.show2, name="show2"),
     path('length',firstapp.views.length,name="length"),
     path('bigram',firstapp.views.bigram,name="bigram"),
-    path('show3',firstapp.views.show3, name="show3")
+    path('show3',firstapp.views.show3, name="show3"),
+    path('fileinput',firstapp.views.fileinput, name="fileinput"),
+    path('fileoutput',firstapp.views.fileoutput, name="fileoutput"),
+    path('indata',firstapp.views.indata, name="indata"),
+    path('outdata',firstapp.views.outdata, name="outdata")
 ]

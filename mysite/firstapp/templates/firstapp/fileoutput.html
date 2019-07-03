@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File output</title>
+</head>
+<body>
+<h1>파일 만들기</h1>
+<form action="{% url 'outdata' %}">
+    <p>제목</p>
+    <input type="text" name="title">
+    <p>내용</p>
+    <textarea name="content" cols="40" rows="8" ></textarea>
+    <input type="submit" value="입력">
+</form>
+</body>
+</html>
